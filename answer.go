@@ -2,7 +2,9 @@ package main
 
 import (
 	"bytes"
+	"fmt"
 	"log"
+	"os"
 	"os/exec"
 	"strings"
 )
@@ -25,17 +27,24 @@ func runTest(test TestCase) bool {
 	if err != nil {
 		log.Fatal(err)
 	}
+	if(out.String() != test.Output) {
+		fmt.Println("Test failed for the following input:")
+		fmt.Println(test.Input)
+		fmt.Println("Expected:")
+		fmt.Println(test.Output)
+		fmt.Println("Received:")
+		fmt.Println(out.String())
+	}
 	return out.String() == test.Output
 }
 
 func runTests(tests []TestCase) {
-	for i, test := range(tests) {
+	for _, test := range(tests) {
 		result := runTest(test)
 		if !result {
-			log.Printf("Test %d failed\n", i)
-			log.Println(test)
-			return;
+			os.Exit(1)
 		} 	
 	}
-	log.Println("All tests successful")
+	fmt.Println("All tests successful")
+	os.Exit(0)
 }

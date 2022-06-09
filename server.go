@@ -3,14 +3,13 @@ package main
 import (
 	"log"
 	"regexp"
-	"strings"
 
 	"github.com/gofiber/fiber/v2"
 )
 
 func processUrl(url string) string {
-	r, _ := regexp.Compile("\\d{4}/problem/[A-E]")
-	return strings.Replace(r.FindString(url), "/problem/", "", -1) + ".cpp"
+	r, _ := regexp.Compile("(\\d{4})/\\w*/?([A-E])")
+	return r.ReplaceAllString(r.FindString(url), `$1$2`) + ".cpp"
 }
 
 func postRoute(c *fiber.Ctx) error {
