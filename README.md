@@ -10,16 +10,11 @@
   </p>
 </div>
 
-<!-- <!-- ABOUT THE PROJECT --> -->
 <!-- ## About The Project -->
-<!-- <p align="right">(<a href="#top">back to top</a>)</p> -->
-
 ### Built With
 
 * [Go](https://go.dev/)
 * [Go Fiber](https://gofiber.io/)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- ## Getting Started -->
 <!-- This is an example of how you may give instructions on setting up your project locally. -->
@@ -27,8 +22,6 @@
 
 ### Prerequisites
 [Competitive Companion Extension for Chrome/Firefox](https://github.com/jmerle/competitive-companion)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -44,14 +37,10 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- CONTACT -->
 ## Contact
